@@ -1,0 +1,17 @@
+<ion-content #content>
+  <app-page-header [mTitle]="'Usage'"></app-page-header>
+  <div>
+    <ion-button (click)="doEverything()" *ngIf="mLogEntries === ''" color="success" expand="block">DO</ion-button>
+
+    <!--LOG-->
+    <ion-item>
+      <ion-textarea
+        [autoGrow]="true"
+        [value]="mLogEntries"
+        placeholder="Console"
+        readonly="true"
+        style="font-size: 0.8rem; margin-bottom: 30px">
+      </ion-textarea>
+    </ion-item>
+  </div>
+</ion-content>
