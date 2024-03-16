@@ -1,11 +1,13 @@
 package com.kheoss.filechunkreader;
 
+import android.content.Context;
+import android.net.Uri;
 import android.util.Log;
+
+import com.getcapacitor.JSObject;
+
+import java.io.InputStream;
 
 public class FileChunkReader {
 
-    public String echo(String value) {
-        Log.i("Echo", value);
-        return value;
-    }
 }

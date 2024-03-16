@@ -11,9 +11,55 @@ npx cap sync
 
 ## API
 
-<docgen-index></docgen-index>
+<docgen-index>
+
+* [`readChunk(...)`](#readchunk)
+* [`uploadFileChunk(...)`](#uploadfilechunk)
+* [`uploadFile(...)`](#uploadfile)
+
+</docgen-index>
 
 <docgen-api>
-<!-- run docgen to generate docs from the source -->
-<!-- More info: https://github.com/ionic-team/capacitor-docgen -->
+<!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
+
+### readChunk(...)
+
+```typescript
+readChunk(options: { uri: string; offset: number; length: number; }) => Promise<{ data: string; }>
+```
+
+| Param         | Type                                                          |
+| ------------- | ------------------------------------------------------------- |
+| **`options`** | <code>{ uri: string; offset: number; length: number; }</code> |
+
+**Returns:** <code>Promise&lt;{ data: string; }&gt;</code>
+
+--------------------
+
+
+### uploadFileChunk(...)
+
+```typescript
+uploadFileChunk(options: { uri: string; accessToken: string; targetPath: string; fileSize: number; }) => void
+```
+
+| Param         | Type                                                                                     |
+| ------------- | ---------------------------------------------------------------------------------------- |
+| **`options`** | <code>{ uri: string; accessToken: string; targetPath: string; fileSize: number; }</code> |
+
+--------------------
+
+
+### uploadFile(...)
+
+```typescript
+uploadFile(options: { uri: string; accessToken: string; targetPath: string; }) => void
+```
+
+| Param         | Type                                                                   |
+| ------------- | ---------------------------------------------------------------------- |
+| **`options`** | <code>{ uri: string; accessToken: string; targetPath: string; }</code> |
+
+--------------------
+
 </docgen-api>
