@@ -16,6 +16,7 @@ npx cap sync
 * [`readChunk(...)`](#readchunk)
 * [`uploadFileChunk(...)`](#uploadfilechunk)
 * [`uploadFile(...)`](#uploadfile)
+* [Interfaces](#interfaces)
 
 </docgen-index>
 
@@ -25,12 +26,12 @@ npx cap sync
 ### readChunk(...)
 
 ```typescript
-readChunk(options: { uri: string; offset: number; length: number; }) => Promise<{ data: string; }>
+readChunk(options: MobileOptions) => Promise<{ data: string; }>
 ```
 
-| Param         | Type                                                          |
-| ------------- | ------------------------------------------------------------- |
-| **`options`** | <code>{ uri: string; offset: number; length: number; }</code> |
+| Param         | Type                                                    |
+| ------------- | ------------------------------------------------------- |
+| **`options`** | <code><a href="#mobileoptions">MobileOptions</a></code> |
 
 **Returns:** <code>Promise&lt;{ data: string; }&gt;</code>
 
@@ -40,12 +41,12 @@ readChunk(options: { uri: string; offset: number; length: number; }) => Promise<
 ### uploadFileChunk(...)
 
 ```typescript
-uploadFileChunk(options: { uri: string; accessToken: string; targetPath: string; fileSize: number; }) => void
+uploadFileChunk(options: MobileOptions | WebOptions) => void
 ```
 
-| Param         | Type                                                                                     |
-| ------------- | ---------------------------------------------------------------------------------------- |
-| **`options`** | <code>{ uri: string; accessToken: string; targetPath: string; fileSize: number; }</code> |
+| Param         | Type                                                                                            |
+| ------------- | ----------------------------------------------------------------------------------------------- |
+| **`options`** | <code><a href="#mobileoptions">MobileOptions</a> \| <a href="#weboptions">WebOptions</a></code> |
 
 --------------------
 
@@ -53,13 +54,35 @@ uploadFileChunk(options: { uri: string; accessToken: string; targetPath: string;
 ### uploadFile(...)
 
 ```typescript
-uploadFile(options: { uri: string; accessToken: string; targetPath: string; }) => void
+uploadFile(options: MobileOptions | WebOptions) => void
 ```
 
-| Param         | Type                                                                   |
-| ------------- | ---------------------------------------------------------------------- |
-| **`options`** | <code>{ uri: string; accessToken: string; targetPath: string; }</code> |
+| Param         | Type                                                                                            |
+| ------------- | ----------------------------------------------------------------------------------------------- |
+| **`options`** | <code><a href="#mobileoptions">MobileOptions</a> \| <a href="#weboptions">WebOptions</a></code> |
 
 --------------------
+
+
+### Interfaces
+
+
+#### MobileOptions
+
+| Prop              | Type                |
+| ----------------- | ------------------- |
+| **`uri`**         | <code>string</code> |
+| **`accessToken`** | <code>string</code> |
+| **`targetPath`**  | <code>string</code> |
+| **`fileSize`**    | <code>number</code> |
+
+
+#### WebOptions
+
+| Prop              | Type                |
+| ----------------- | ------------------- |
+| **`accessToken`** | <code>string</code> |
+| **`file`**        | <code>File</code>   |
+| **`targetPath`**  | <code>string</code> |
 
 </docgen-api>

@@ -1,18 +1,16 @@
+interface MobileOptions {
+  uri: string;
+  accessToken: string;
+  targetPath: string;
+  fileSize: number;
+}
+interface WebOptions {
+  accessToken: string;
+  file: File;
+  targetPath: string;
+}
 export interface FileChunkReaderPlugin {
-  readChunk(options: {
-    uri: string;
-    offset: number;
-    length: number;
-  }): Promise<{ data: string }>;
-  uploadFileChunk(options: {
-    uri: string;
-    accessToken: string;
-    targetPath: string;
-    fileSize: number;
-  }): void;
-  uploadFile(options: {
-    uri: string;
-    accessToken: string;
-    targetPath: string;
-  }): void;
+  readChunk?(options: MobileOptions): Promise<{ data: string }>;
+  uploadFileChunk?(options: MobileOptions | WebOptions): void;
+  uploadFile?(options: MobileOptions | WebOptions): void;
 }
