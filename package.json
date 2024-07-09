@@ -1,6 +1,6 @@
 {
   "name": "capacitor-file-chunk-reader",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A capacitor plugin for Android and IOS to read BIG files in chunks",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
