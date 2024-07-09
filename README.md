@@ -16,10 +16,10 @@ npx cap sync
 
 <docgen-index>
 
-- [`readChunk(...)`](#readchunk)
-- [`uploadFileChunk(...)`](#uploadfilechunk)
-- [`uploadFile(...)`](#uploadfile)
-- [Interfaces](#interfaces)
+* [`readChunk(...)`](#readchunk)
+* [`uploadFileChunk(...)`](#uploadfilechunk)
+* [`uploadFile(...)`](#uploadfile)
+* [Interfaces](#interfaces)
 
 </docgen-index>
 
@@ -38,7 +38,8 @@ readChunk(options: MobileOptions) => Promise<{ data: string; }>
 
 **Returns:** <code>Promise&lt;{ data: string; }&gt;</code>
 
----
+--------------------
+
 
 ### uploadFileChunk(...)
 
@@ -50,7 +51,8 @@ uploadFileChunk(options: MobileOptions | WebOptions) => void
 | ------------- | ----------------------------------------------------------------------------------------------- |
 | **`options`** | <code><a href="#mobileoptions">MobileOptions</a> \| <a href="#weboptions">WebOptions</a></code> |
 
----
+--------------------
+
 
 ### uploadFile(...)
 
@@ -62,9 +64,11 @@ uploadFile(options: MobileOptions | WebOptions) => void
 | ------------- | ----------------------------------------------------------------------------------------------- |
 | **`options`** | <code><a href="#mobileoptions">MobileOptions</a> \| <a href="#weboptions">WebOptions</a></code> |
 
----
+--------------------
+
 
 ### Interfaces
+
 
 #### MobileOptions
 
@@ -74,6 +78,7 @@ uploadFile(options: MobileOptions | WebOptions) => void
 | **`accessToken`** | <code>string</code> |
 | **`targetPath`**  | <code>string</code> |
 | **`fileSize`**    | <code>number</code> |
+
 
 #### WebOptions
 

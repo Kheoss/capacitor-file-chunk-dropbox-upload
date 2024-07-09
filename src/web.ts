@@ -2,6 +2,7 @@
 import { WebPlugin } from '@capacitor/core';
 import { Dropbox } from 'dropbox';
 import { FileChunkReaderPlugin } from './definitions';
+import { BlobServiceClient } from '@azure/storage-blob';
 
 export class FileChunkReaderWeb
   extends WebPlugin
