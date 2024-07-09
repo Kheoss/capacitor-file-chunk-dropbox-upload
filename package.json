@@ -76,6 +76,7 @@
     }
   },
   "dependencies": {
+    "@azure/storage-blob": "^12.23.0",
     "dropbox": "^10.34.0"
   }
 }
