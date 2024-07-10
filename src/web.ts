@@ -166,7 +166,11 @@ export class FileChunkReaderWeb
     await blockBlobClient.commitBlockList(
       blockIds.map(id => btoa(String(id).padStart(5, '0'))),
     );
-    doneCallback(true, { message: 'Upload complete' });
+    doneCallback(true, {
+      message: 'Upload complete',
+      container: containerName,
+      fileName: targetPath,
+    });
   }
 
   /**
@@ -205,7 +209,11 @@ export class FileChunkReaderWeb
           );
         },
       });
-      doneCallback(true, { message: 'Upload complete' });
+      doneCallback(true, {
+        message: 'Upload complete',
+        container: containerName,
+        fileName: targetPath,
+      });
     } catch (error) {
       console.error('Error uploading file:', error);
       doneCallback(false, error);
